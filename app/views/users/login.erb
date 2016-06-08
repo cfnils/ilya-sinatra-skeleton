@@ -1,0 +1,21 @@
+<h2>Login Page</h2>
+<div align="center">
+  <form method="post" action="/login">
+    <label>Email:</label>
+    <input name="email" type="text">
+  
+    <label>Password:</label>
+    <input name="password" type="password">
+  
+    <input type="submit" value="Log In">
+</form>
+</div>
+
+<div>
+<%if @errors%>
+  <%@errors.each do |error|%>
+    <p><%=error%> </p>
+  <% end %>
+<%end%>
+
+</div>
